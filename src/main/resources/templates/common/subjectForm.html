@@ -1,0 +1,83 @@
+<div th:fragment="subject-form">
+    <div class="row">
+        <div class="col-md-16">
+            <div class="form-group mb-3">
+                <label class="form-label">Mã môn học</label>
+                <input class="form-control" id="id" name="id" readonly th:field="*{id}" type="text" />
+                <p th:errors="*{id}" class="text-danger" th:if="${#fields.hasErrors('id')}"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">Tên môn học</label>
+                <input class="form-control" id="tenMonHoc" name="tenMonHoc" placeholder="Nhập tên môn học"
+                    th:field="*{tenMonHoc}" type="text" required />
+                <p th:errors="*{tenMonHoc}" class="text-danger" th:if="${#fields.hasErrors('tenMonHoc')}">
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">Số tín chỉ</label>
+                <input class="form-control" id="soTinChi" name="soTinChi" placeholder="Nhập số tín chỉ"
+                    th:field="*{soTinChi}" type="number" required />
+                <p th:errors="*{soTinChi}" class="text-danger" th:if="${#fields.hasErrors('soTinChi')}">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">Tỷ lệ điểm chuyên cần</label>
+                <input class="form-control" id="tyLediemChuyenCan" name="tyLediemChuyenCan"
+                    placeholder="Nhập tỷ lệ điểm chuyên cần" th:field="*{tyLediemChuyenCan}" type="number" required />
+                <p th:errors="*{tyLediemChuyenCan}" class="text-danger"
+                    th:if="${#fields.hasErrors('tyLediemChuyenCan')}">
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">Tỷ lệ điểm bài tập lớn</label>
+                <input class="form-control" id="tyLediemBaiTapLon" name="tyLediemBaiTapLon"
+                    placeholder="Nhập tỷ lệ điểm bài tập lớn" th:field="*{tyLediemBaiTapLon}" type="number" required />
+                <p th:errors="*{tyLediemBaiTapLon}" class="text-danger"
+                    th:if="${#fields.hasErrors('tyLediemBaiTapLon')}">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">Tỷ lệ điểm kiểm tra giữa kỳ</label>
+                <input class="form-control" id="tyLediemKiemTraGiuaKy" name="tyLediemKiemTraGiuaKy"
+                    placeholder="Nhập tỷ lệ điểm kiểm tra giữa kỳ" th:field="*{tyLediemKiemTraGiuaKy}" type="number"
+                    required />
+                <p th:errors="*{tyLediemKiemTraGiuaKy}" class="text-danger"
+                    th:if="${#fields.hasErrors('tyLediemKiemTraGiuaKy')}">
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">Tỷ lệ điểm kiểm tra cuối kỳ</label>
+                <input class="form-control" id="tyLediemKiemTraCuoiKy" name="tyLediemKiemTraCuoiKy"
+                    placeholder="Nhập tỷ lệ điểm kiểm tra cuối kỳ" th:field="*{tyLediemKiemTraCuoiKy}" type="number"
+                    required />
+                <p th:errors="*{tyLediemKiemTraCuoiKy}" class="text-danger"
+                    th:if="${#fields.hasErrors('tyLediemKiemTraCuoiKy')}">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
